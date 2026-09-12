@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CertameTech | Portfólio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="topbar">
+    <a class="brand" href="#inicio">CertameTech</a>
+    <nav aria-label="Navegação principal">
+        <a href="#projeto">Projeto</a>
+        <a href="#funcionalidades">Funcionalidades</a>
+        <a href="#cronograma">Cronograma</a>
+        <a href="#arquitetura">Arquitetura</a>
+        <a href="#documentacao">Documentação</a>
+        <a href="#diagramas">Diagramas</a>
+        <a href="#evidencias">Evidências</a>
+    </nav>
+</header>
+
+<main id="inicio">
+    <section class="hero">
+        <img src="assets/certametech-system-hero.svg" alt="Painel do CertameTech com prova digitalizada, marcações de correção, critérios de avaliação e validação da coordenação">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <p class="eyebrow">Sistema web para concursos públicos</p>
+            <h1>CertameTech</h1>
+            <p class="lead">Plataforma desenvolvida para digitalizar a correção de provas discursivas e peças processuais, com distribuição para avaliadores, validação pela coordenação e consulta segura pelo candidato.</p>
+            <div class="hero-actions">
+                <a class="button primary" href="#projeto">Ver estudo de caso</a>
+                <a class="button secondary" href="#funcionalidades">Funcionalidades</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="projeto" class="section intro-grid">
+        <div>
+            <p class="section-label">Contexto</p>
+            <h2>Da correção manual para um fluxo digital rastreável</h2>
+            <p>O Instituto UniFil realizava o controle de correções com planilhas, imagens de redações e processos manuais. Isso dificultava a distribuição equilibrada das provas, a validação das notas, o acompanhamento do status e a consulta individualizada pelos candidatos.</p>
+            <p>O CertameTech foi implementado sobre o sistema existente para centralizar esse processo em uma aplicação web, mantendo regras de acesso para coordenação, avaliadores e candidatos.</p>
+        </div>
+        <aside class="metrics">
+            <div>
+                <strong>3</strong>
+                <span>perfis de usuário</span>
+            </div>
+            <div>
+                <strong>7</strong>
+                <span>casos de usos</span>
+            </div>
+            <div>
+                <strong>Java</strong>
+                <span>back-end com VRaptor e Spring</span>
+            </div>
+        </aside>
+    </section>
+
+    <section class="section problem-solution">
+        <div>
+            <p class="section-label">Problema</p>
+            <h2>Correções difíceis de acompanhar</h2>
+            <ul>
+                <li>Distribuição manual de provas entre avaliadores.</li>
+                <li>Risco de sobrecarga em alguns corretores.</li>
+                <li>Notas e apontamentos separados em planilhas.</li>
+                <li>Candidato precisava consultar arquivos e informações de forma pouco integrada.</li>
+                <li>Necessidade de proteger dados pessoais durante a correção.</li>
+            </ul>
+        </div>
+        <div>
+            <p class="section-label">Solução</p>
+            <h2>Um ciclo completo dentro do sistema</h2>
+            <ul>
+                <li>Upload de provas pela coordenação.</li>
+                <li>Direcionamento de provas para avaliadores.</li>
+                <li>Correção com PDF, marcações, critérios e comentários.</li>
+                <li>Validação da correção pela coordenação.</li>
+                <li>Publicação da prova corrigida para o candidato.</li>
+                <li>Fluxo de recurso quando o candidato contesta a correção.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="funcionalidades" class="section">
+        <p class="section-label">Funcionalidades</p>
+        <h2>Módulos implementados</h2>
+        <div class="feature-grid">
+            <article>
+                <span class="icon">01</span>
+                <h3>Gestão de usuários</h3>
+                <p>Cadastro, busca, edição e exclusão de avaliadores e coordenadores, com dados pessoais e controle de acesso por perfil.</p>
+            </article>
+            <article>
+                <span class="icon">02</span>
+                <h3>Distribuição de provas</h3>
+                <p>Coordenação acompanha status das correções e direciona provas discursivas ou peças para avaliadores disponíveis.</p>
+            </article>
+            <article>
+                <span class="icon">03</span>
+                <h3>Correção digital</h3>
+                <p>Avaliador visualiza o PDF, cria marcações, informa critérios, comentários, siglas e notas conforme o tipo de prova.</p>
+            </article>
+            <article>
+                <span class="icon">04</span>
+                <h3>Validação da coordenação</h3>
+                <p>Coordenação revisa a correção, consulta histórico e valida a nota antes de liberar o espelho para o candidato.</p>
+            </article>
+            <article>
+                <span class="icon">05</span>
+                <h3>Consulta do candidato</h3>
+                <p>Candidato visualiza a prova corrigida somente quando o resultado está divulgado e a correção foi liberada.</p>
+            </article>
+            <article>
+                <span class="icon">06</span>
+                <h3>Recurso da correção</h3>
+                <p>Quando há período ativo, o candidato registra fundamentação e o sistema encaminha a prova para revisão da coordenação.</p>
+            </article>
+        </div>
+    </section>
+
+    <section id="arquitetura" class="section architecture">
+        <div>
+            <p class="section-label">Arquitetura</p>
+            <h2>Stack e organização técnica</h2>
+            <p>A implementação foi feita em uma aplicação Java web existente, usando controllers, repositories e páginas JSP para integrar as regras de negócio ao fluxo administrativo e à área do candidato.</p>
+        </div>
+        <div class="stack-list">
+            <span>Java 8</span>
+            <span>VRaptor 3.5.3</span>
+            <span>Spring</span>
+            <span>PostgreSQL</span>
+            <span>JSP</span>
+            <span>JavaScript</span>
+            <span>PDF.js</span>
+            <span>UML</span>
+            <span>BPMN</span>
+        </div>
+    </section>
+
+    <section class="section flow">
+        <p class="section-label">Fluxo principal</p>
+        <h2>Como a correção chega ao candidato</h2>
+        <ol>
+            <li><strong>Coordenação</strong> envia a prova e distribui para um avaliador.</li>
+            <li><strong>Avaliador</strong> corrige o PDF, registra marcações, notas e comentários.</li>
+            <li><strong>Coordenação</strong> valida a correção e libera o arquivo para o candidato.</li>
+            <li><strong>Candidato</strong> acessa a Casa do Candidato e visualiza a prova corrigida.</li>
+            <li><strong>Recurso</strong> pode ser aberto quando o período configurado estiver ativo.</li>
+        </ol>
+    </section>
+
+    <section id="cronograma" class="section timeline-section">
+        <div class="section-heading">
+            <div>
+                <p class="section-label">Casos de uso</p>
+                <h2>O que o sistema permite fazer</h2>
+            </div>
+            <p>Os casos de uso organizam as entregas previstas e mostram a evolução do projeto durante o bimestre.</p>
+        </div>
+        <div class="use-case-grid">
+            <article><span class="case-number">Caso01</span><h3>Gerenciar usuários</h3><p>Criar, buscar, editar e desativar contas de avaliadores e coordenadores.</p></article>
+            <article><span class="case-number">Caso02</span><h3>Fazer upload de provas</h3><p>Enviar um ZIP, identificar inscrições e disponibilizar os PDFs para distribuição.</p></article>
+            <article><span class="case-number">Caso03</span><h3>Distribuir discursivas e peças</h3><p>Atribuir provas aos avaliadores e acompanhar quantidade e status.</p></article>
+            <article><span class="case-number">Caso04</span><h3>Corrigir discursivas e peças</h3><p>Marcar o PDF, aplicar critérios, registrar comentários e salvar a nota.</p></article>
+            <article><span class="case-number">Caso05</span><h3>Validar correção</h3><p>Revisar a correção, alterar quando necessário e validar o resultado.</p></article>
+            <article><span class="case-number">Caso06</span><h3>Validar nota final</h3><p>Somar notas, conferir resultados e agendar a divulgação aos candidatos.</p></article>
+            <article><span class="case-number">Caso07</span><h3>Verificar correção</h3><p>Consultar a prova corrigida, marcações, comentários, nota e recurso.</p></article>
+        </div>
+
+        <div class="schedule-wrap">
+            <div class="section-heading compact-heading">
+                <div>
+                    <p class="section-label">Planejamento</p>
+                    <h2>Cronograma de desenvolvimento</h2>
+                </div>
+            </div>
+            <div class="table-scroll">
+                <table>
+                    <thead><tr><th>Caso de uso</th><th>Entrega prevista</th><th>Status</th></tr></thead>
+                    <tbody>
+                        <tr><td>Caso01 - Gerenciar usuários</td><td>10/06/2026</td><td><span class="status done">Concluído</span></td></tr>
+                        <tr><td>Caso02 - Fazer upload de provas</td><td>10/09/2026</td><td><span class="status done">Concluído</span></td></tr>
+                        <tr><td>Caso03 - Distribuir discursivas e peças</td><td>10/06/2026</td><td><span class="status done">Concluído</span></td></tr>
+                        <tr><td>Caso04 - Corrigir discursivas e peças</td><td>27/07/2026</td><td><span class="status done">Concluído</span></td></tr>
+                        <tr><td>Caso05 - Validar correção</td><td>06/08/2026</td><td><span class="status done">Concluído</span></td></tr>
+                        <tr><td>Caso06 e Caso07 - Nota final e consulta</td><td>13/08/2026</td><td><span class="status done">Concluído</span></td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <section id="documentacao" class="section documentation">
+        <div>
+            <p class="section-label">Documentações</p>
+            <h2>Requisitos, regras e fluxos do CertameTech</h2>
+            <p>O conjunto atual documenta o problema do investidor, os termos do domínio, os requisitos não funcionais e o comportamento esperado das principais funcionalidades.</p>
+        </div>
+        <div class="resource-list">
+            <a href="https://drive.google.com/file/d/1v6kDpkLKhCkuD6Q-M9Zmo8dmtB23Ug7O/view?usp=sharing" target="_blank" rel="noopener"><span>01</span><strong>Pedidos do Investidor</strong><small>Problemas, perfis de usuário e necessidades levantadas</small><b>25/05/26</b></a>
+
+            <a href="https://drive.google.com/file/d/1s7PWKse7tpahwWlDlTnd3wNQeuFvxswq/view?usp=sharing" target="_blank" rel="noopener"><span>02</span><strong>Especificação Suplementar</strong><small>Funcionalidade, segurança, desempenho e interfaces</small><b>25/05/26</b></a>
+            
+            <a href="https://drive.google.com/file/d/187_71kRZYQ9iLu8xlVdXfAYFTGD35C5J/view?usp=sharing" target="_blank" rel="noopener"><span>03</span><strong>Caso01 · Gerenciar Usuários </strong><small>Contas, permissões, busca, edição e desativação</small><b>13/08/26</b></a>
+
+            <a href="https://drive.google.com/file/d/11mT2XU4UilIoi-TpfhMmf9esTTKBZhtt/view?usp=sharing" target="_blank" rel="noopener"><span>04</span><strong>Caso02 · Fazer Upload Prova</strong><small>Processamento do ZIP, inscrições e pendências</small><b>17/08/26</b></a>
+
+            <a href="https://drive.google.com/file/d/1t8PD7qyGe3K_PzMxA5Tr_zgn2qXW1N0U/view?usp=sharing" target="_blank" rel="noopener"><span>05</span><strong>Caso03 · Distribuir Discursivas/Peças</strong><small>Atribuição de provas e acompanhamento dos avaliadores</small><b>07/05/26</b></a>
+
+            <a href="https://drive.google.com/file/d/18YAE-PxydhDB3JcZYqBWBZKIZyo2i0Ux/view?usp=sharing" target="_blank" rel="noopener"><span>06</span><strong>Caso04 · Corrigir Discursivas/Peças</strong><small>Marcações, critérios, comentários e rascunhos</small><b>27/07/26</b></a>
+
+            <a href="https://drive.google.com/file/d/10yIUwoIepTR3--eCFUBK3rBfiHn4UKra/view?usp=sharing" target="_blank" rel="noopener"><span>07</span><strong>Caso05 · Validar Correção</strong><small>Revisão, alterações e validação pela coordenação</small><b>29/07/26</b></a>
+
+            <a href="https://drive.google.com/file/d/1algaHT5mwbuuCc6Xv_XnKCoSUgLXbOTn/view?usp=sharing" target="_blank" rel="noopener"><span>08</span><strong>Caso06 · Validar Nota Final</strong><small>Soma das notas e agendamento da divulgação</small><b>04/05/26</b></a>
+
+            <a href="https://drive.google.com/file/d/1Wbfpho2Wn2QOgS-ZaZmx74MxFjima7V7/view?usp=sharing" target="_blank" rel="noopener"><span>09</span><strong>Caso07 · Verificar Correção</strong><small>Consulta do PDF corrigido e solicitação de recurso</small><b>17/08/26</b></a>
+
+            <a href="https://drive.google.com/file/d/1vfpienBtAwxO464tRl4yKxLuQKtXyt-a/view?usp=sharing" target="_blank" rel="noopener"><span>10</span><strong>Glossário</strong><small>Termos técnicos, de negócio e estereótipos UML</small><b>01/09/26</b></a>
+            
+        </div>
+    </section>
+
+    <section id="diagramas" class="section diagrams-section">
+        <div class="section-heading">
+            <div>
+                <p class="section-label">Modelagem do sistema</p>
+                <h2>Diagramas que explicam a solução</h2>
+            </div>
+            <p>A modelagem registra a estrutura, os comportamentos, os fluxos e a infraestrutura do CertameTech.</p>
+        </div>
+        <div class="diagram-grid">
+            <a href="https://drive.google.com/file/d/1u_0gYABMjRQlZDyqGDVnnWcIl0qYfsbm/view?usp=sharing" target="_blank" rel="noopener"><span>01</span><h3>Casos de uso</h3><p>Atores, funcionalidades e relações de extensão entre os principais casos.</p></a>
+            <a href="https://drive.google.com/file/d/1pC9lQdFjPv6kzl4HsYi0HZsHo8KPyG4Q/view?usp=sharing" target="_blank" rel="noopener"><span>02</span><h3>Diagrama de classes</h3><p>Entidades do domínio, atributos, métodos e relacionamentos persistidos.</p></a>
+
+                <a href="https://drive.google.com/file/d/1DA9v5NqUBny4vjY57eDQPtRfz2jXRUC3/view?usp=sharing" target="_blank" rel="noopener"><span>03</span><h3>Sequência 01 · Gerenciar usuários</h3><p>Fluxo de cadastro, busca, edição e desativação de usuários.</p></a>
+
+                <a href="https://drive.google.com/file/d/1mTjQApdsE6WBKkiHQZwztdthrvjr2z5W/view?usp=sharing" target="_blank" rel="noopener"><span>04</span><h3>Sequência 02 · Fazer upload</h3><p>Envio e processamento das provas em arquivo ZIP.</p></a>
+
+                <a href="https://drive.google.com/file/d/11xV9o6VwJvgAJaViCd-NRqrPFrLxo3IW/view?usp=sharing" target="_blank" rel="noopener"><span>05</span><h3>Sequência 03 · Distribuir provas</h3><p>Atribuição de provas e acompanhamento dos avaliadores.</p></a>
+
+                <a href="https://drive.google.com/file/d/1eQsnB-207Mf8TlrWqR_Q8w3fS5Di01zu/view?usp=sharing" target="_blank" rel="noopener"><span>06</span><h3>Sequência 04 · Corrigir provas</h3><p>Correção, marcações, critérios, comentários e nota.</p></a>
+
+                <a href="https://drive.google.com/file/d/1Ldy4PVlelVqxsDDXND1kB5GTIEwaTls6/view?usp=sharing" target="_blank" rel="noopener"><span>07</span><h3>Sequência 05 · Validar correção</h3><p>Revisão e validação da correção pela coordenação.</p></a>
+
+                <a href="https://drive.google.com/file/d/1J8qS-gcpowplg_1pZ_s3ZmA8hN232Pwl/view?usp=sharing" target="_blank" rel="noopener"><span>08</span><h3>Sequência 06 · Validar nota final</h3><p>Soma das notas e divulgação do resultado.</p></a>
+
+                <a href="https://drive.google.com/file/d/1MwXpagPJRZb0S3VOuyXoX5mtoDlOPeNn/view?usp=sharing" target="_blank" rel="noopener"><span>09</span><h3>Sequência 07 · Verificar correção</h3><p>Consulta da prova corrigida e solicitação de recurso.</p></a>
+
+                <a href="https://drive.google.com/file/d/1yvMQyvgPCHRzGL_elfc01YgfhvX1R9n2/view?usp=sharing" target="_blank" rel="noopener"><span>08</span><h3>Sequência 08 · Recurso correção</h3><p>Candidato entra com recurso em relação a correção da sua prova.</p></a>
+
+                <a href="https://drive.google.com/file/d/1J1ne8iNJUZ3BLTgb5Kzh1v_yysl5MG92/view?usp=sharing" target="_blank" rel="noopener"><span>10</span><h3>Estados 01 · Distribuição da prova</h3><p>Estados pendente, atribuído, em andamento e corrigida.</p></a>
+
+                <a href="https://drive.google.com/file/d/1CFLoaHx_QHYf1TrhIeCABnVKcEKspj-O/view?usp=sharing" target="_blank" rel="noopener"><span>11</span><h3>Estados 02 · Gerenciar usuários</h3><p>Transições entre usuário ativo e inativo.</p></a>
+
+                <a href="https://drive.google.com/file/d/1mZqD404IY_9b36Hx-i9j9-bOxFp1L-dw/view?usp=sharing" target="_blank" rel="noopener"><span>12</span><h3>Estados 03 · Recurso</h3><p>Fluxo do recurso até a correção validada.</p></a>
+
+                <a href="https://drive.google.com/file/d/1bqacIKMCDV4zgjooV3sll2WsXbLL549J/view?usp=sharing" target="_blank" rel="noopener"><span>13</span><h3>Diagrama de implantação</h3><p>Dispositivo do usuário, navegador, servidor AWS e banco de dados.</p></a>
+
+                <a href="https://drive.google.com/file/d/1AuyTuGVyX0z3BVD3-bcgw5np3Mb5Go0b/view?usp=sharing" target="_blank" rel="noopener"><span>14</span><h3>Diagrama BPMN</h3><p>Fluxo de correção, comunicação entre perfis e solicitação de recurso.</p></a>
+
+                <a href="https://drive.google.com/file/d/1l04GympahQA1uQTypE1WCWXCIENZs07L/view?usp=sharing" target="_blank" rel="noopener"><span>15</span><h3>Modelo de dados</h3><p>Tabelas, chaves e vínculos entre candidatos, provas, correções e recursos.</p></a>
+        </div>
+    </section>
+
+    <section id="evidencias" class="section evidence">
+        <div class="section-heading">
+            <div>
+                <p class="section-label">Evidências</p>
+                <h2>O sistema em funcionamento</h2>
+            </div>
+        </div>
+        <div class="evidence-grid">
+            <a class="evidence-card evidence-placeholder" href="https://drive.google.com/file/d/1ovxlTQcLwuuahH-Pa5eA9MDNIgskExEU/view?usp=sharing"><span class="evidence-mark">01 · COORDENAÇÃO</span><strong>Upload de provas</strong><small>Envio de arquivo ZIP com PDFs e identificação das inscrições.</small></a>
+            <a class="evidence-card evidence-placeholder" href="https://drive.google.com/file/d/1oT5Pf8UUYQiyyzvGb959JfIw1WYB5sR-/view?usp=sharing"><span class="evidence-mark">02 · COORDENAÇÃO</span><strong>Distribuição de provas</strong><small>Consulta de status e atribuição da prova a um avaliador.</small></a>
+            <a class="evidence-card evidence-placeholder" href="https://drive.google.com/file/d/1HOyURerQ6XeGb6SjTkDtaZyGsEvsIrRJ/view?usp=sharing"><span class="evidence-mark">03 · AVALIADOR</span><strong>Correção da prova</strong><small>Critérios, marcações, descontos e observações no PDF.</small></a>
+            <a class="evidence-card evidence-placeholder" href="https://drive.google.com/file/d/1zd0AElecF9fM9lwt11skOz0-8XimShbI/view?usp=sharing"><span class="evidence-mark">04 · COORDENAÇÃO</span><strong>Validação da correção</strong><small>Histórico, alterações e confirmação da correção realizada.</small></a>
+            <a class="evidence-card evidence-placeholder" href="https://drive.google.com/file/d/1ODvfm03yGElHrSMg4iIB-jQ15tY69YT8/view?usp=sharing"><span class="evidence-mark">05 · COORDENAÇÃO</span><strong>Validação da nota final</strong><small>Soma das notas objetiva e discursiva antes da divulgação.</small></a>
+            <a class="evidence-card evidence-placeholder" href="https://drive.google.com/file/d/16S02KII5ZI2KXxU8rJHIb3LZwpH7lqd_/view?usp=sharing"><span class="evidence-mark">06 · CANDIDATO</span><strong>Verificar correção</strong><small>Prova corrigida, nota final, marcações e opção de recurso.</small></a>
+            <a class="evidence-card evidence-placeholder" href="https://drive.google.com/file/d/1tf48sawSDTIoYpP5ZwIEAGjnfBYO2zBf/view?usp=sharing"><span class="evidence-mark">07 · COORDENAÇÃO</span><strong>Cadastro de usuários</strong><small>Cadastro do avaliador, essa tela é idêntica ao cadastro do coordenador.</small></a>
+            <a class="evidence-card video-card" href="assets/Estagio.mp4"><span class="play">▶</span><strong>Vídeo de demonstração</strong><small>Apresente o fluxo completo em até 5 minutos.</small></a>
+        </div>
+    </section>
+
+    <section class="section delivery-grid">
+        <div class="report-panel">
+            <p class="section-label">Relatório de estágio</p>
+            <h2>Atividades desenvolvidas no bimestre</h2>
+            <p>Consulte o relatório atualizado com as atividades, aprendizados e resultados obtidos durante o estágio.</p>
+            <a class="text-link" href="assets/Relatorio%20de%20estagio.pdf" target="_blank" rel="noopener">Abrir relatório em PDF <span>↗</span></a>
+        </div>
+        <div class="student-panel">
+            <p class="section-label">Identificação do aluno</p>
+            <dl>
+                <div><dt>Nome completo</dt><dd>Alexksandro Fernandes de Queiroz</dd></div>
+                <div><dt>Matrícula</dt><dd>241072148</dd></div>
+                <div><dt>Professor orientador</dt><dd>Marcelo Yukio Yamamoto</dd></div>
+            </dl>
+        </div>
+    </section>
+
+    <section id="resultado" class="section result">
+        <div>
+            <p class="section-label">Resultado</p>
+            <h2>Mais controle, segurança e transparência</h2>
+            <p>O CertameTech reduz a dependência de planilhas, melhora a rastreabilidade das correções e organiza a comunicação entre coordenação, avaliadores e candidatos. O processo fica mais padronizado, com validações antes da publicação e acesso individualizado às informações.</p>
+        </div>
+        <div class="role-list">
+            <div><strong>Coordenação</strong><span>distribui, acompanha, valida e responde recursos.</span></div>
+            <div><strong>Avaliador</strong><span>corrige provas com critérios, marcações e parecer.</span></div>
+            <div><strong>Candidato</strong><span>consulta nota, espelho corrigido e situação do recurso.</span></div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <strong>CertameTech</strong>
+    <span>Portfólio acadêmico de Engenharia de Software - 2026</span>
+</footer>
+</body>
+</html>
